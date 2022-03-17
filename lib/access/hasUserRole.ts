@@ -1,4 +1,4 @@
-export function hasUserRole() {
+export function hasUserRole(role: string) {
     // TODO:
     return true;
 }
