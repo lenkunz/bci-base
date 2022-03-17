@@ -1,13 +1,9 @@
+import React from "react";
 import { Layout } from "../../components/layout/Layout"
+import { getLayout } from "./getLayout";
 
 type Props = {}
 
 export function withLayout(WrappedComponent: React.ComponentType) {
-  return function component({...props}: Props) {
-    return (
-      <Layout>
-        <WrappedComponent {...props} />
-      </Layout>
-    )
-  }
+  (WrappedComponent as any).getLayout = getLayout;
 };

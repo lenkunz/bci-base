@@ -1,15 +1,14 @@
 import { NextPage } from 'next'
 import React from 'react'
 import { Layout } from '../../components/layout/Layout'
+import { withLayout } from '../../lib/layout/withLayout'
 
 type Props = {}
 
-const Index: NextPage = ({ }: Props) => {
+export default function Index({ }: Props) {
   return (
-    <Layout>
-      <div>test</div>
-    </Layout>
+    <div>test</div>
   )
 }
 
-export default Index;
+withLayout(Index);

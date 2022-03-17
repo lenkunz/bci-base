@@ -5,11 +5,11 @@ type Props = {
   children: React.ReactNode
 }
 
-export function Layout({ ...pageProps }: Props) {
+export function Layout({ children, ...pageProps }: Props) {
   return (
     <>
       <Sidebar />
-      {/* <Component {...pageProps} /> */}
+      {children}
     </>
   )
 }
